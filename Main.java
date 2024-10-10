@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 public class Main {
     public static void main(String[] args) {
         ///zad1
@@ -122,18 +124,28 @@ public class Main {
         }
         System.out.println(nowe);
         System.out.println("\n");
+        ///zad12
+        LocalDateTime data = LocalDateTime.now();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String formatData = data.format(format);
+        System.out.println("Dzisiaj jest " + formatData);
         ///zad13
         System.out.println("Zadanie 13: ");
+        String imieNazw = "Jakub Chryszczanowicz";
+        int dlugosc12 = imieNazw.length();
+
         char numer1 = 54;
         char numer2 = 103;
         char numer3 = 241;
         char numer4 = 67;
         char numer5 = 9999;
+        char numer6 = (char)dlugosc12;
         System.out.println(numer1);
         System.out.println(numer2);
         System.out.println(numer3);
         System.out.println(numer4);
         System.out.println(numer5);
+        System.out.println(numer6);
         System.out.println("\n");
     }
 }
